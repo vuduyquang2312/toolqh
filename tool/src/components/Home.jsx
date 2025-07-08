@@ -30,7 +30,7 @@ const Home = () => {
         }
 
 
-        fetch("http://localhost:3001/api/profile", {
+        fetch("http://103.167.89.103:3001/api/profile", {
             headers: { Authorization: token },
         })
             .then((res) => res.json())
@@ -46,7 +46,7 @@ const Home = () => {
                 setBalance(data.balance || 0);
 
                 // Lấy danh sách ảnh
-                fetch("http://localhost:3001/api/images", {
+                fetch("http://103.167.89.103:3001/api/images", {
                     headers: { Authorization: token }, // Nếu backend cần Bearer thì thêm Bearer ở đây
                 })
                     .then((res) => res.json())
@@ -83,7 +83,7 @@ const Home = () => {
     };
 
     const renderImageGallery = () => {
-        const baseURL = "http://localhost:3001/images";
+        const baseURL = "http://103.167.89.103:3001/images";
         const images = [
             { name: "PG2 ĐIỆN TỬ", file: "pg.png" },
             { name: "SPRIBE ĐIỆN TỬ", file: "spribe.png" },
