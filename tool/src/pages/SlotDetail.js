@@ -42,7 +42,7 @@ const SlotDetail = () => {
             if (!isReady) return;
 
             try {
-                const res = await axios.post("http://localhost:3001/api/percentage", {
+                const res = await axios.post("https://khunggiomayman.com/api/percentage", {
                     username,
                     name,
                     slotId: id,
@@ -581,19 +581,16 @@ const SlotDetail = () => {
                         <FaArrowLeft className="text-xl mr-4" />Quay lại
                     </button>
 
-                    {/* Hiển thị tiêu đề category */}
                     <div className="text-center">
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                             {name || "Game Category"}
                         </h2>
                     </div>
 
-                    {/* Hiển thị hình ảnh cho tất cả categories */}
                     {renderGameGrid()}
                 </div>
             </div>
 
-            {/* Form nạp xu */}
             {showTopup && <TopupForm onClose={() => setShowTopup(false)} />}
         </div>
     );

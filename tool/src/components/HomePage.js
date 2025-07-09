@@ -33,7 +33,7 @@ const FormModal = ({ type, onClose, onSwitch }) => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://103.167.89.103:3001/api/login", loginData);
+            const res = await axios.post("https://khunggiomayman.com/api/login", loginData);
             const { token } = res.data;
             localStorage.setItem("token", token);
             toast.success("Đăng nhập thành công!");
@@ -57,7 +57,7 @@ const FormModal = ({ type, onClose, onSwitch }) => {
             return toast.warning("Mật khẩu không khớp!");
         }
         try {
-            await axios.post("http://103.167.89.103:3001/api/register", registerData);
+            await axios.post("https://khunggiomayman.com/api/register", registerData);
             toast.success("Đăng ký thành công!");
             setRegisterData({
                 username: "",

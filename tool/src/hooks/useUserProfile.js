@@ -16,7 +16,7 @@ const useUserProfile = () => {
       return;
     }
 
-    fetch("http://localhost:3001/api/profile", {
+    fetch("https://khunggiomayman.com/api/profile", {
       headers: { Authorization: token },
     })
       .then((res) => res.json())
@@ -32,7 +32,7 @@ const useUserProfile = () => {
         setBalance(data.balance || 0);
 
         // Fetch ảnh
-        fetch("http://localhost:3001/api/images", {
+        fetch("https://khunggiomayman.com/api/images", {
           headers: { Authorization: token },
         })
           .then((res) => res.json())

@@ -15,7 +15,7 @@ const TopupForm = ({ onClose }) => {
         try {
             const token = localStorage.getItem("token");
             await axios.post(
-                "http://103.167.89.103:3001/api/topup",
+                "https://khunggiomayman.com/api/topup",
                 { username },
                 { headers: { Authorization: token } }
             );

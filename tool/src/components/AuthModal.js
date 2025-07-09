@@ -16,8 +16,8 @@ const LoginModal = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://103.167.89.103:3001/api/login", formData);
-            const profileRes = await axios.get("http://103.167.89.103:3001/api/profile", {
+            const res = await axios.post("https://khunggiomayman.com/api/login", formData);
+            const profileRes = await axios.get("https://khunggiomayman.com/api/profile", {
 
                 headers: { Authorization: token },
             });
